@@ -24,18 +24,64 @@
         <form method="post" action="#">
             <section class="row checkout">
                 <article class="col-sm-12 col-md-8">
-                    <strong> Contact Information </strong>
-                    <br>
-                    <label for="email"> Email </label>
-                    <br>
-                    <input type="email" name="email" id="email">
-                    <br>
-                    <label for="phone"> Phone </label>
-                    <br>
-                    <input type="phone" name="phone" id="phone">
+                    <div class="col-sm-12">
+                        <strong> Contact Information </strong>
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="email"> Email </label>
+                        <br>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="phone"> Phone </label>
+                        <br>
+                        <input type="phone" name="phone" id="phone">
+                    </div>
                     
-                    <br><br>
-                    <strong> Shipping Address </strong>
+                    <div class="clear"> &nbsp;</div>
+                    
+                    <div class="col-sm-12">
+                        <strong> Shipping Address </strong>    
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="name"> Full Name </label>
+                        <br>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="address"> Address </label>
+                        <br>
+                        <input type="text" name="address" id="address">
+                    </div>
+                    <div class="col-sm-12">
+                        <label for="city"> City </label>
+                        <br>
+                        <input type="text" name="city" id="city">
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <label for="country"> Postal Code </label>
+                        <br>
+                        <select name="country" id="country">
+                            <option value="default"> Default </option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="postal"> Postal Code </label>
+                        <br>
+                        <input type="number" name="postal" id="postal" maxlength="5">
+                    </div>
+                    
+                    <div class="col-sm-8">
+                        <input type="checkbox" name="remember" id="remember">
+                        <label for="remember">
+                            Save this information for next time
+                        </label>
+                    </div>
+                    <div class="col-sm-4">
+                        <input type="submit" onsubmit="" value="Continue">
+                    </div>
+                    
                 </article>
                 <article class="col-sm-12 col-md-4">
                     Vintage Backpack
