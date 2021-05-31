@@ -62,21 +62,17 @@ footer a:hover { text-decoration: underline; }
 .checkout article:nth-child(2) {
     grid-row: 1;
     grid-column: 3;
-    
-    background: var(--light-grey);
-    padding: 20px;
-    border-radius: 15px;
 }
-.checkout input[type='phone'], .checkout input[type='email'], .checkout input[type='text'], .checkout input[type='number'], .checkout input[type='submit'], .checkout select {
+.info input[type='phone'], .info input[type='email'], .info input[type='text'], .info input[type='number'], .info input[type='submit'], .info select {
     width: 100%;
     padding: 15px 0 15px 62px;
     border: 1px solid var(--dark-grey);
     border-radius: 10px;
 }
-.checkout .country {
+.info .country {
     position: relative;
 }
-.checkout .country .arrow {
+.info .country .arrow {
     pointer-events: none;
     display: block;
     position: absolute;
@@ -90,18 +86,16 @@ footer a:hover { text-decoration: underline; }
     font-size: 1.2em;
     font-weight: bold;
 }
-.checkout .country .arrow .material-icons {
+.info .country .arrow .material-icons {
     position: relative;
     top: 4px;
 }
-
-
-.checkout input[type='checkbox'] {
+.info input[type='checkbox'] {
     opacity: 0;
     height: 0;
     width: 0;
 }
-.checkout input[type='checkbox'] ~ .checkbox {
+.info input[type='checkbox'] ~ .checkbox {
     display: block;
     width: 1.2em;
     height: 1.2em;
@@ -112,10 +106,10 @@ footer a:hover { text-decoration: underline; }
     top: 3px;
     padding: 2px;
 }
-.checkout input[type='checkbox'] ~ .checkbox:after, .checkout input[type='checkbox']:not(:checked) ~ .checkbox:after {
+.info input[type='checkbox'] ~ .checkbox:after, .info input[type='checkbox']:not(:checked) ~ .checkbox:after {
     content: none;
 }
-.checkout input[type='checkbox']:checked ~ .checkbox:after {
+.info input[type='checkbox']:checked ~ .checkbox:after {
     content: '\2713';
     position: absolute;
     top: 9px;
@@ -125,15 +119,12 @@ footer a:hover { text-decoration: underline; }
     color: var(--dark-grey);
     line-height: 0;
 }
-.checkout input[type='submit'] {
+.info input[type='submit'] {
     background: var(--orange);
     color: #fff;
     border: 0;
     padding: 15px;
 }
-
-
-
 .input { 
     width: 100%; 
     position: relative;
@@ -156,10 +147,47 @@ footer a:hover { text-decoration: underline; }
 }
 .remember {
     position: relative;
-    left: -32px;
+    left: -22px;
     top: 24px;
 }
 
+
+.cart {
+    width: 92%;
+    background: var(--light-grey);
+    padding: 40px 0 40px 40px;
+}
+.cart img {
+    width: 100%;
+}
+.cart, .cart img { 
+    border-radius: 15px; 
+}
+.sale-price {
+    color: var(--orange);
+    font-size: 1.2em;
+    margin-right: 5px;
+}
+.original-price {
+    text-decoration: line-through;
+    font-size: 0.8em;
+}
+.cart .cart-item { 
+    display: grid; 
+    gap: 1em;
+    margin-bottom: 20px;
+    width: 70%;
+}
+.cart .cart-item .cart-item-thumbnail { grid-column: 1; }
+.cart .cart-item .cart-item-info { grid-column: 2; }
+.cart input[type='number'] {
+    background: none;
+    width: 60%;
+    padding: 15px;
+    border: 1px solid var(--dark-grey);
+    border-radius: 10px;
+    text-align: center;
+}
 
 
 /* Queries */
@@ -178,6 +206,7 @@ footer a:hover { text-decoration: underline; }
         left: 26px;
         top: -20px;
     }
+    .country { margin-bottom: 20px; }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 800px) {

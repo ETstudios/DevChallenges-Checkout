@@ -23,7 +23,7 @@
         
         <form method="post" action="#">
             <section class="checkout row">
-                <article class="col-sm-12">
+                <article class="col-sm-12 info">
                     <div class="row">
                         <div class="col-sm-12">
                             <strong> Contact Information </strong>
@@ -120,7 +120,6 @@
                                     <span class="material-icons">keyboard_arrow_down</span>
                                 </span>
                             </label>  
-                            <br><br>
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label class="input" for="postal"> 
@@ -154,7 +153,42 @@
                     </div>
                 </article>
                 <article class="col-sm-12">
-                    Vintage Backpack
+                    <div class="cart">
+                        <div class="row">
+                            <div class="cart-item">
+                                <div class="cart-item-thumbnail">
+                                    <img src="img/backpack.png" alt="Vintage backpack">
+                                </div>
+                                <div class="cart-item-info">
+                                    Vintage Backpack
+                                    <br>
+                                    <span class="sale-price"> $54.99 </span>
+                                    <span class="original-price"> $94.99 </span>
+                                    
+                                    <br><br>
+                                    
+                                    <input type="number" name="bkpk-count" id="bkpk" value="1">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="cart-item">
+                                <div class="cart-item-thumbnail">
+                                    <img src="img/shoes.png" alt="A pair of Levi shoes">
+                                </div>
+                                <div class="cart-item-info">
+                                    Levi Shoes
+                                    <br>
+                                    <span class="sale-price"> $74.99 </span>
+                                    <span class="original-price"> $124.99 </span>
+                                    
+                                    <br><br>
+                                    
+                                    <input type="number" name="bkpk-count" id="bkpk" value="1">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </section>
         </form>
