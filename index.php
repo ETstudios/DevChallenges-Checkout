@@ -1,5 +1,8 @@
 <?php
-   // $_POST PHP validation
+    // $_POST validation
+    // $_POST sanitization
+    // Ensure correct value types
+    // Quantities can't be below 1
 ?>
 <!doctype html>
 <html lang="en">
@@ -16,7 +19,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/checkout.js"></script>
 </head>
-<body>
+<body onload="TotalCalc()">
     <div class="container">
         <h1> Checkout </h1>
         <br>
@@ -102,7 +105,7 @@
                         <div class="col-sm-12 col-md-6 country">
                             <label class="input" for="country">
                                 <span class="title"> Country  </span> 
-                                <select name="country" id="country">
+                                <select name="country" id="country" onchange="ShippingUpdate(this);">
                                     <option value="null"> Your country </option>
                                     <option value="IE"> Ireland </option>
                                     <option value="GB"> United Kingdom </option>
@@ -155,12 +158,12 @@
                             <div class="cart-item-info">
                                 <strong> Vintage Backpack </strong>
                                 <br>
-                                <span class="sale-price"> $54.99 </span>
-                                <span class="original-price"> $94.99 </span>
+                                <span class="sale-price" id="bkpk-sale"> $54.99 </span>
+                                <span class="original-price" id="bkpk-original"> $94.99 </span>
                                 <div class="qty">
-                                    <input type="number" name="bkpk-qty" id="bkpk" min="1" value="1" readonly onchange="">
-                                    <button class="decrease" type="button" onclick="return "> - </button>
-                                    <button class="increase" type="button" onclick=""> + </button>
+                                    <input type="number" name="bkpk-qty" id="bkpk" min="1" value="1" onchange="TotalCalc()">
+                                    <button class="decrease" type="button" onclick="QtyChange('bkpk', -1)"> - </button>
+                                    <button class="increase" type="button" onclick="QtyChange('bkpk', 1)"> + </button>
                                 </div>
                             </div>
                         </div>
@@ -172,12 +175,12 @@
                             <div class="cart-item-info">
                                 <strong> Levi Shoes </strong>
                                 <br>
-                                <span class="sale-price"> $74.99 </span>
-                                <span class="original-price"> $124.99 </span>
+                                <span class="sale-price" id="shoes-sale"> $74.99 </span>
+                                <span class="original-price" id="shoes-original"> $124.99 </span>
                                 <div class="qty">
-                                    <input type="number" name="shoes-qty" id="shoes" min="1" value="1" readonly onchange="">
-                                    <button class="decrease" type="button" onclick=""> - </button>
-                                    <button class="increase" type="button" onclick=""> + </button>
+                                    <input type="number" name="shoes-qty" id="shoes" min="1" value="1" onchange="TotalCalc()">
+                                    <button class="decrease" type="button" onclick="QtyChange('shoes', -1)"> - </button>
+                                    <button class="increase" type="button" onclick="QtyChange('shoes', 1)"> + </button>
                                 </div>
                             </div>
                         </div>
