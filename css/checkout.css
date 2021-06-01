@@ -141,15 +141,13 @@ footer a:hover { text-decoration: underline; }
     left: 20px;
     top: 41px;   
 }
-.input .subtitle {
-    position: relative;
-    left: 15px;
-    top: -6px;
-}
 .remember {
     position: relative;
     left: -22px;
     top: 24px;
+}
+.input input:focus ~ label {
+    display: none;
 }
 
 
@@ -167,12 +165,12 @@ footer a:hover { text-decoration: underline; }
 }
 .sale-price {
     color: var(--orange);
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-right: 5px;
 }
 .original-price {
     text-decoration: line-through;
-    font-size: 0.8em;
+    font-size: 1.2em;
 }
 .cart .cart-item { 
     display: grid; 
@@ -196,9 +194,6 @@ footer a:hover { text-decoration: underline; }
       -webkit-appearance: none; 
       margin: 0; 
 }
-.cart .pricing {
-    
-}
 .cart hr {
     width: 100%;
     color: var(--dark-grey);
@@ -211,7 +206,7 @@ footer a:hover { text-decoration: underline; }
 }
 .qty {
     position: relative;
-    margin-top: 44px;
+    margin-top: 26px;
 }
 .qty button.decrease, .qty button.increase {
     position: absolute;

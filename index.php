@@ -21,7 +21,7 @@
         <h1> Checkout </h1>
         <br>
         
-        <form method="post" action="#">
+        <form method="post" action="#" id="checkout-form">
             <section class="checkout">
                 <article class="col-sm-12 info">
                     <div class="row">
@@ -34,10 +34,9 @@
                         <div class="col-sm-12">
                             <label class="input" for="email">     
                                 <span class="title"> Email </span>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" placeholder="Enter your email">
                                 <span class="label">
                                     <span class="material-icons">mail</span>
-                                    <span class="subtitle"> Enter your email </span>
                                 </span>
                             </label>
                         </div>
@@ -47,10 +46,9 @@
                         <div class="col-sm-12">
                             <label class="input" for="phone">     
                                 <span class="title"> Phone </span>
-                                <input type="phone" name="phone" id="phone">
+                                <input type="phone" name="phone" id="phone" placeholder="Enter your phone">
                                 <span class="label">
                                     <span class="material-icons">call</span>
-                                    <span class="subtitle"> Enter your phone </span>
                                 </span>
                             </label>
                         </div>
@@ -68,10 +66,9 @@
                         <div class="col-sm-12">
                             <label class="input" for="name">     
                                 <span class="title"> Full Name </span>
-                                <input type="text" name="name" id="name">
+                                <input type="text" name="name" id="name" placeholder="Enter your name">
                                 <span class="label">
                                     <span class="material-icons">account_circle</span>
-                                    <span class="subtitle"> Enter your name </span>
                                 </span>
                             </label>
                         </div>
@@ -81,10 +78,9 @@
                         <div class="col-sm-12">
                             <label class="input" for="address">     
                                 <span class="title"> Address </span>
-                                <input type="text" name="address" id="address">
+                                <input type="text" name="address" id="address" placeholder="Enter your street address">
                                 <span class="label">
                                     <span class="material-icons">home</span>
-                                    <span class="subtitle"> Enter your street address </span>
                                 </span>
                             </label>
                         </div>
@@ -94,10 +90,9 @@
                         <div class="col-sm-12">
                             <label class="input" for="city">     
                                 <span class="title"> City </span>
-                                <input type="text" name="city" id="city">
+                                <input type="text" name="city" id="city" placeholder="Enter your city">
                                 <span class="label">
                                     <span class="material-icons">location_city</span>
-                                    <span class="subtitle"> Enter your city </span>
                                 </span>
                             </label>
                         </div>
@@ -124,10 +119,9 @@
                         <div class="col-sm-12 col-md-6">
                             <label class="input" for="postal"> 
                                 <span class="title"> Postal Code  </span>
-                                <input type="text" name="postal" id="postal" maxlength="5">
+                                <input type="text" name="postal" id="postal" maxlength="5" placeholder="Enter your postal code">
                                 <span class="label">
                                     <span class="material-icons">markunread_mailbox</span>
-                                    <span class="subtitle"> Enter your postal code </span>
                                 </span>
                             </label>
                         </div>
@@ -159,14 +153,14 @@
                                 <img src="img/backpack.png" alt="Vintage backpack">
                             </div>
                             <div class="cart-item-info">
-                                Vintage Backpack
+                                <strong> Vintage Backpack </strong>
                                 <br>
                                 <span class="sale-price"> $54.99 </span>
                                 <span class="original-price"> $94.99 </span>
                                 <div class="qty">
                                     <input type="number" name="bkpk-qty" id="bkpk" min="1" value="1" readonly onchange="">
-                                    <button class="decrease" onclick=""> - </button>
-                                    <button class="increase" onclick=""> + </button>
+                                    <button class="decrease" type="button" onclick="return "> - </button>
+                                    <button class="increase" type="button" onclick=""> + </button>
                                 </div>
                             </div>
                         </div>
@@ -176,30 +170,31 @@
                                 <img src="img/shoes.png" alt="A pair of Levi shoes">
                             </div>
                             <div class="cart-item-info">
-                                Levi Shoes
+                                <strong> Levi Shoes </strong>
                                 <br>
                                 <span class="sale-price"> $74.99 </span>
                                 <span class="original-price"> $124.99 </span>
                                 <div class="qty">
                                     <input type="number" name="shoes-qty" id="shoes" min="1" value="1" readonly onchange="">
-                                    <button class="decrease" onclick=""> - </button>
-                                    <button class="increase" onclick=""> + </button>
+                                    <button class="decrease" type="button" onclick=""> - </button>
+                                    <button class="increase" type="button" onclick=""> + </button>
                                 </div>
                             </div>
                         </div>
                         
+                        <div class="clear"> &nbsp; </div>
                         <hr>
                         
                         <div class="pricing">
                             <strong class="title"> Shipping </strong>
-                            <strong class="price"> $0 </strong>
+                            <strong class="price" id="shipping-price"> $0 </strong>
                         </div>
                         
                         <hr>
                         
                         <div class="pricing">
                             <strong class="title"> Total </strong>
-                            <strong class="price"> $0 </strong>
+                            <strong class="price" id="total-price"> $0 </strong>
                         </div>
                     </div>
                 </article>
