@@ -22,7 +22,7 @@
         <br>
         
         <form method="post" action="#">
-            <section class="checkout row">
+            <section class="checkout">
                 <article class="col-sm-12 info">
                     <div class="row">
                         <div class="col-sm-12">
@@ -154,39 +154,52 @@
                 </article>
                 <article class="col-sm-12">
                     <div class="cart">
-                        <div class="row">
-                            <div class="cart-item">
-                                <div class="cart-item-thumbnail">
-                                    <img src="img/backpack.png" alt="Vintage backpack">
-                                </div>
-                                <div class="cart-item-info">
-                                    Vintage Backpack
-                                    <br>
-                                    <span class="sale-price"> $54.99 </span>
-                                    <span class="original-price"> $94.99 </span>
-                                    
-                                    <br><br>
-                                    
-                                    <input type="number" name="bkpk-count" id="bkpk" value="1">
+                        <div class="cart-item">
+                            <div class="cart-item-thumbnail">
+                                <img src="img/backpack.png" alt="Vintage backpack">
+                            </div>
+                            <div class="cart-item-info">
+                                Vintage Backpack
+                                <br>
+                                <span class="sale-price"> $54.99 </span>
+                                <span class="original-price"> $94.99 </span>
+                                <div class="qty">
+                                    <input type="number" name="bkpk-qty" id="bkpk" min="1" value="1" readonly onchange="">
+                                    <button class="decrease" onclick=""> - </button>
+                                    <button class="increase" onclick=""> + </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="cart-item">
-                                <div class="cart-item-thumbnail">
-                                    <img src="img/shoes.png" alt="A pair of Levi shoes">
-                                </div>
-                                <div class="cart-item-info">
-                                    Levi Shoes
-                                    <br>
-                                    <span class="sale-price"> $74.99 </span>
-                                    <span class="original-price"> $124.99 </span>
-                                    
-                                    <br><br>
-                                    
-                                    <input type="number" name="bkpk-count" id="bkpk" value="1">
+
+                        <div class="cart-item">
+                            <div class="cart-item-thumbnail">
+                                <img src="img/shoes.png" alt="A pair of Levi shoes">
+                            </div>
+                            <div class="cart-item-info">
+                                Levi Shoes
+                                <br>
+                                <span class="sale-price"> $74.99 </span>
+                                <span class="original-price"> $124.99 </span>
+                                <div class="qty">
+                                    <input type="number" name="shoes-qty" id="shoes" min="1" value="1" readonly onchange="">
+                                    <button class="decrease" onclick=""> - </button>
+                                    <button class="increase" onclick=""> + </button>
                                 </div>
                             </div>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="pricing">
+                            <strong class="title"> Shipping </strong>
+                            <strong class="price"> $0 </strong>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="pricing">
+                            <strong class="title"> Total </strong>
+                            <strong class="price"> $0 </strong>
                         </div>
                     </div>
                 </article>

@@ -3,6 +3,7 @@
     --orange: #F2994A;
     --black: #4E5150;
     --light-grey: #F2F2F2;
+    --mid-grey: #E0E0E0;
     --dark-grey: #4F4F4F;
 }
 
@@ -153,9 +154,10 @@ footer a:hover { text-decoration: underline; }
 
 
 .cart {
-    width: 92%;
+    width: 72%;
     background: var(--light-grey);
-    padding: 40px 0 40px 40px;
+    padding: 40px;
+    float: right;
 }
 .cart img {
     width: 100%;
@@ -175,19 +177,57 @@ footer a:hover { text-decoration: underline; }
 .cart .cart-item { 
     display: grid; 
     gap: 1em;
-    margin-bottom: 20px;
-    width: 70%;
+    margin-bottom: 40px;
+    width: 90%;
 }
 .cart .cart-item .cart-item-thumbnail { grid-column: 1; }
 .cart .cart-item .cart-item-info { grid-column: 2; }
 .cart input[type='number'] {
     background: none;
-    width: 60%;
+    width: 100%;
     padding: 15px;
     border: 1px solid var(--dark-grey);
     border-radius: 10px;
     text-align: center;
+    -moz-appearance: textfield;
+    appearance: textfield;
 }
+.cart input[type=number]::-webkit-inner-spin-button, .cart input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
+.cart .pricing {
+    
+}
+.cart hr {
+    width: 100%;
+    color: var(--dark-grey);
+    background-color: var(--dark-grey);
+    opacity: 0.4;
+}
+.cart .pricing .price {
+    text-align: right;
+    float: right;
+}
+.qty {
+    position: relative;
+    margin-top: 44px;
+}
+.qty button.decrease, .qty button.increase {
+    position: absolute;
+    top: 15px;
+    display: block;
+    border: none;
+    background-color: var(--mid-grey);
+    color: var(--dark-grey);
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+.qty button.decrease { left: 10px; }
+.qty button.increase { right: 10px; }
 
 
 /* Queries */
@@ -207,6 +247,18 @@ footer a:hover { text-decoration: underline; }
         top: -20px;
     }
     .country { margin-bottom: 20px; }
+    .cart {
+        width: 100%;
+        padding: 20px;
+        float: none;
+    }
+    .cart .cart-item { 
+        width: 100%;
+        display: block;
+    }
+    .qty {
+        margin-top: 10px;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 800px) {
