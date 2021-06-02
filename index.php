@@ -1,8 +1,7 @@
 <?php
-    // $_POST validation
-    // $_POST sanitization
-    // Ensure correct value types
-    // Quantities can't be below 1
+    
+    // Pass in $_SESSION vars for email, phone, full name, and country errors
+    // Set previously entered data as values using $_SESSION if there was a server-side error
 ?>
 <!doctype html>
 <html lang="en">
@@ -24,7 +23,7 @@
         <h1> Checkout </h1>
         <br>
         
-        <form method="post" action="#" id="checkout-form">
+        <form method="post" action="checkout.php" id="checkout-form" onsubmit="event.preventDefault(); ValidateForm()">
             <section class="checkout">
                 <article class="col-sm-12 info">
                     <div class="row">
@@ -36,8 +35,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label class="input" for="email">     
-                                <span class="title"> Email </span>
-                                <input type="email" name="email" id="email" placeholder="Enter your email">
+                                <span class="title"> 
+                                    Email 
+                                    <span id="email-msg" class="error"></span>
+                                </span>
+                                <input type="email" name="email" id="email" placeholder="Enter your email" onkeyup="ValidateEmail(this)">
                                 <span class="label">
                                     <span class="material-icons">mail</span>
                                 </span>
@@ -48,8 +50,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label class="input" for="phone">     
-                                <span class="title"> Phone </span>
-                                <input type="phone" name="phone" id="phone" placeholder="Enter your phone">
+                                <span class="title"> 
+                                    Phone 
+                                    <span id="phone-msg" class="error"></span>
+                                </span>
+                                <input type="phone" name="phone" id="phone" placeholder="Enter your phone" onkeyup="ValidatePhone(this)">
                                 <span class="label">
                                     <span class="material-icons">call</span>
                                 </span>
@@ -68,8 +73,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label class="input" for="name">     
-                                <span class="title"> Full Name </span>
-                                <input type="text" name="name" id="name" placeholder="Enter your name">
+                                <span class="title"> 
+                                    Full Name 
+                                    <span id="name-msg" class="error"></span>
+                                </span>
+                                <input type="text" name="name" id="name" placeholder="Enter your name" onkeyup="ValidateName(this)">
                                 <span class="label">
                                     <span class="material-icons">account_circle</span>
                                 </span>
@@ -80,8 +88,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label class="input" for="address">     
-                                <span class="title"> Address </span>
-                                <input type="text" name="address" id="address" placeholder="Enter your street address">
+                                <span class="title"> 
+                                    Address 
+                                    <span id="address-msg" class="error"></span>
+                                </span>
+                                <input type="text" name="address" id="address" placeholder="Enter your street address" onkeyup="ValidateAddress(this)">
                                 <span class="label">
                                     <span class="material-icons">home</span>
                                 </span>
@@ -92,8 +103,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <label class="input" for="city">     
-                                <span class="title"> City </span>
-                                <input type="text" name="city" id="city" placeholder="Enter your city">
+                                <span class="title"> 
+                                    City 
+                                    <span id="city-msg" class="error"></span>
+                                </span>
+                                <input type="text" name="city" id="city" placeholder="Enter your city" onkeyup="ValidateCity(this)">
                                 <span class="label">
                                     <span class="material-icons">location_city</span>
                                 </span>
@@ -104,8 +118,11 @@
                     <div class="row">
                         <div class="col-sm-12 col-md-6 country">
                             <label class="input" for="country">
-                                <span class="title"> Country  </span> 
-                                <select name="country" id="country" onchange="ShippingUpdate(this);">
+                                <span class="title"> 
+                                    Country  
+                                    <span id="country-msg" class="error"></span>
+                                </span> 
+                                <select name="country" id="country" onchange="ShippingUpdate(this); ValidateCountry(this);">
                                     <option value="null"> Your country </option>
                                     <option value="IE"> Ireland </option>
                                     <option value="GB"> United Kingdom </option>
@@ -121,8 +138,11 @@
                         </div>
                         <div class="col-sm-12 col-md-6">
                             <label class="input" for="postal"> 
-                                <span class="title"> Postal Code  </span>
-                                <input type="text" name="postal" id="postal" maxlength="5" placeholder="Enter your postal code">
+                                <span class="title"> 
+                                    Postal Code 
+                                    <span id="postal-msg" class="error"></span>
+                                </span>
+                                <input type="text" name="postal" id="postal" maxlength="5" placeholder="Enter your postal code" onkeyup="ValidatePostal(this)">
                                 <span class="label">
                                     <span class="material-icons">markunread_mailbox</span>
                                 </span>
@@ -145,7 +165,7 @@
                     <div class="row">
                         <div class="col-sm-8"> &nbsp; </div>
                         <div class="col-sm-4">
-                            <input type="submit" onsubmit="" value="Continue">
+                            <input type="submit" value="Continue">
                         </div>
                     </div>
                 </article>

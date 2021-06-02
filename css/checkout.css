@@ -1,6 +1,7 @@
 /* General */
 :root {
     --orange: #F2994A;
+    --red: #c60d0d;
     --black: #4E5150;
     --light-grey: #F2F2F2;
     --mid-grey: #E0E0E0;
@@ -35,6 +36,11 @@ footer a:hover { text-decoration: underline; }
 .clear { 
     clear: both;
     margin-bottom: 20px; 
+}
+.error {
+    color: var(--red);
+    font-weight: bold;
+    float: right;
 }
 
 
