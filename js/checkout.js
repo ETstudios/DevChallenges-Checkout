@@ -110,7 +110,7 @@ function ValidateCountry(country) {
 function ValidateEmail(email) {
     let result = false;
     let msg = null;
-    let pattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let pattern = /^[a-zA-Z0-9.!#&'*+^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     
     if (!email.value.match(pattern) || email.value == "") {
         msg = "Not a valid email";
