@@ -285,7 +285,7 @@
                                 <span class="sale-price" id="bkpk-sale"> $54.99 </span>
                                 <span class="original-price" id="bkpk-original"> $94.99 </span>
                                 <div class="qty">
-                                    <input type="number" name="bkpk-qty" id="bkpk" min="1" value="<?php echo $bkpk; ?>" onchange="TotalCalc()">
+                                    <input type="number" name="bkpk-qty" id="bkpk" min="1" value="<?php echo $bkpk; ?>" onkeyup="TotalCalc()">
                                     <button class="decrease" type="button" onclick="QtyChange('bkpk', -1)"> - </button>
                                     <button class="increase" type="button" onclick="QtyChange('bkpk', 1)"> + </button>
                                 </div>
@@ -302,7 +302,7 @@
                                 <span class="sale-price" id="shoes-sale"> $74.99 </span>
                                 <span class="original-price" id="shoes-original"> $124.99 </span>
                                 <div class="qty">
-                                    <input type="number" name="shoes-qty" id="shoes" min="1" value="<?php echo $shoes; ?>" onchange="TotalCalc()">
+                                    <input type="number" name="shoes-qty" id="shoes" min="1" value="<?php echo $shoes; ?>" onkeyup="TotalCalc()">
                                     <button class="decrease" type="button" onclick="QtyChange('shoes', -1)"> - </button>
                                     <button class="increase" type="button" onclick="QtyChange('shoes', 1)"> + </button>
                                 </div>

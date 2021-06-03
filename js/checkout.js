@@ -8,6 +8,11 @@ function PriceCalc(item) {
     let qty = document.getElementById(item).value;    
     let price = document.getElementById(item + "-sale").innerHTML;
     
+    if (isNaN(qty) || qty < 1) {
+        qty = 1;
+        document.getElementById(item).value = qty;
+    }
+
     price = price.substring(2, price.length);
     price = parseFloat(price);
     
@@ -51,8 +56,7 @@ function ShippingUpdate(country) {
 }
 
 function TotalCalc() {
-    let totalText = document.getElementById("total-price");
-    
+    let totalText = document.getElementById("total-price");    
     let bkpkCost = PriceCalc("bkpk");
     let shoesCost = PriceCalc("shoes");
     let total = bkpkCost + shoesCost + shipping;

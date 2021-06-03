@@ -189,7 +189,7 @@
     if (!isset($_SESSION['err-address']) && !isset($_SESSION['err-city']) && !isset($_SESSION['err-country']) && !isset($_SESSION['err-email']) && !isset($_SESSION['err-name']) && !isset($_SESSION['err-phone']) && !isset($_SESSION['err-postal']) && !isset($_SESSION['err-bkpk']) && !isset($_SESSION['err-shoes'])) {
         $price = TotalCalc($calcData);
         $_SESSION['price'] = $price;
-        $redirect .= "?success=true";
+        $redirect = "receipt.php";
     }
 
     header("Location: {$redirect}");
