@@ -46,7 +46,6 @@ function ShippingUpdate(country) {
             shipping = 50;
             break;
     }
-    
     shippingText.innerHTML = "$" + shipping;
     TotalCalc();
 }

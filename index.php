@@ -122,7 +122,7 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/checkout.js"></script>
 </head>
-<body onload="TotalCalc()">
+<body onload="<?php if ($country != null) { echo "ShippingUpdate(document.getElementById('country')); "; } ?> TotalCalc()">
     <div class="container">
         <h1> Checkout </h1>
         <br>
