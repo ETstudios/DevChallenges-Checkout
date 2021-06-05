@@ -31,6 +31,7 @@
 - CSS3
 - [Bootstrap](https://getbootstrap.com) for layout
 - JavaScript
+- PHP
 
 ## Features
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO) was to build an application to complete the given user stories.
